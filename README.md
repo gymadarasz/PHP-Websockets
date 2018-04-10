@@ -40,6 +40,13 @@ For Support
 
 Right now, the only support available is in the Github Issues ( https://github.com/ghedipunk/PHP-Websockets/issues ).  Once I reach my $250/mo Patreon reward level, I'll be able to maintain support forums for non-core code issues.  If you'd like to support the project, and bring these forums closer to reality, you can do so at https://www.patreon.com/ghedipunk .
 
+Install:
+--------
+`composer require gymadarasz/phpwebsockets`
+
+Packagist: 
+https://packagist.org/packages/gymadarasz/phpwebsockets
+
 Example
 -------
 ```php
