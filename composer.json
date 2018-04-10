@@ -7,5 +7,6 @@
             "email": "gyula.madarasz@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "minimum-stability": "dev"
 }
