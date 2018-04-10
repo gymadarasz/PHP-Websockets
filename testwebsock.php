@@ -1,7 +1,10 @@
-#!/usr/bin/env php
 <?php
 
-require_once('./websockets.php');
+require_once __DIR__ . '/vendor/autoload.php';
+
+use gymadarasz\phpwebsocket\WebSocketServer;
+
+//require_once('./websockets.php');
 
 class echoServer extends WebSocketServer {
   //protected $maxBufferSize = 1048576; //1MB... overkill for an echo server, but potentially plausible for other applications.

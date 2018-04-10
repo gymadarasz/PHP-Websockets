@@ -1,5 +1,7 @@
 <?php
 
+namespace gymadarasz\phpwebsocket;
+
 class WebSocketUser {
 
   public $socket;

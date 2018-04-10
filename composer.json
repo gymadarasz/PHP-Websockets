@@ -9,7 +9,6 @@
     ],
     "require": {},
     "autoload": {
-        "psr-4": { "": "" }
-    },
-    "minimum-stability": "dev"
+        "psr-4": { "gymadarasz\\phpwebsocket\\": "src/" }
+    }
 }
