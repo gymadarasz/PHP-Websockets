@@ -5,9 +5,11 @@ namespace gymadarasz\phpwebsocket;
 //require_once('./daemonize.php');
 //require_once('./users.php');
 
+define('DEFAULT_USER_CLASS', __NAMESPACE__ . '\\WebSocketUser');
+
 abstract class WebSocketServer {
 
-  protected $userClass = __NAMESPACE__ . '\\WebSocketUser'; // redefine this if you want a custom user class.  The custom user class should inherit from WebSocketUser.
+  protected $userClass = DEFAULT_USER_CLASS; // redefine this if you want a custom user class.  The custom user class should inherit from WebSocketUser.
   protected $maxBufferSize;        
   protected $master;
   protected $sockets                              = array();
