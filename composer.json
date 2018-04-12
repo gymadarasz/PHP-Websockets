@@ -1,0 +1,15 @@
+{
+    "name": "gymadarasz/phpwebsockets",
+    "description": "It is a fork of ghedipunk/PHP-Websockets library",
+    "authors": [
+        {
+            "name": "gymadarasz",
+            "email": "gyula.madarasz@gmail.com"
+        }
+    ],
+    "version": "0.0.1",
+    "require": {},
+    "autoload": {
+        "psr-4": { "gymadarasz\\phpwebsocket\\": "src/" }
+    }
+}
