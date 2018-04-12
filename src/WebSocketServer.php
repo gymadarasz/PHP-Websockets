@@ -36,16 +36,28 @@ abstract class WebSocketServer {
     
   }
 
+<<<<<<< HEAD
   abstract protected function process(WebSocketUserInterface $user,$message); // Called immediately when the data is recieved. 
   abstract protected function connected(WebSocketUserInterface $user);        // Called after the handshake response is sent to the client.
   abstract protected function closed(WebSocketUserInterface $user);           // Called after the connection is closed.
 
   protected function connecting(WebSocketUserInterface $user) {
+=======
+  abstract protected function process($user,$message); // Called immediately when the data is recieved. 
+  abstract protected function connected($user);        // Called after the handshake response is sent to the client.
+  abstract protected function closed($user);           // Called after the connection is closed.
+
+  protected function connecting($user) {
+>>>>>>> aa9d22e90adae2250473770241ae1dc2eebb0d8c
     // Override to handle a connecting user, after the instance of the User is created, but before
     // the handshake has completed.
   }
   
+<<<<<<< HEAD
   protected function send(WebSocketUserInterface $user, $message) {
+=======
+  protected function send($user, $message) {
+>>>>>>> aa9d22e90adae2250473770241ae1dc2eebb0d8c
     if ($user->handshake) {
       $message = $this->frame($message,$user);
       $result = @socket_write($user->socket, $message, strlen($message));
@@ -189,7 +201,11 @@ abstract class WebSocketServer {
     }
   }
 
+<<<<<<< HEAD
   protected function doHandshake(WebSocketUserInterface $user, $buffer) {
+=======
+  protected function doHandshake($user, $buffer) {
+>>>>>>> aa9d22e90adae2250473770241ae1dc2eebb0d8c
     $magicGUID = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
     $headers = array();
     $lines = explode("\n",$buffer);
@@ -315,7 +331,11 @@ abstract class WebSocketServer {
     }
   }
 
+<<<<<<< HEAD
   protected function frame($message, WebSocketUserInterface $user, $messageType='text', $messageContinues=false) {
+=======
+  protected function frame($message, $user, $messageType='text', $messageContinues=false) {
+>>>>>>> aa9d22e90adae2250473770241ae1dc2eebb0d8c
     switch ($messageType) {
       case 'continuous':
         $b1 = 0;
@@ -436,7 +456,11 @@ abstract class WebSocketServer {
     return $offset;
   }
 
+<<<<<<< HEAD
   protected function deframe($message, WebSocketUserInterface &$user) {
+=======
+  protected function deframe($message, &$user) {
+>>>>>>> aa9d22e90adae2250473770241ae1dc2eebb0d8c
     //echo $this->strtohex($message);
     $headers = $this->extractHeaders($message);
     $pongReply = false;
@@ -570,7 +594,11 @@ abstract class WebSocketServer {
     }
     return $effectiveMask ^ $payload;
   }
+<<<<<<< HEAD
   protected function checkRSVBits($headers, WebSocketUserInterface $user) { // override this method if you are using an extension where the RSV bits are used.
+=======
+  protected function checkRSVBits($headers,$user) { // override this method if you are using an extension where the RSV bits are used.
+>>>>>>> aa9d22e90adae2250473770241ae1dc2eebb0d8c
     if (ord($headers['rsv1']) + ord($headers['rsv2']) + ord($headers['rsv3']) > 0) {
       //$this->disconnect($user); // todo: fail connection
       return true;

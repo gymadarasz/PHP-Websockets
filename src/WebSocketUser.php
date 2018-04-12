@@ -2,7 +2,11 @@
 
 namespace gymadarasz\phpwebsocket;
 
+<<<<<<< HEAD
 class WebSocketUser implements WebSocketUserInterface {
+=======
+class WebSocketUser {
+>>>>>>> aa9d22e90adae2250473770241ae1dc2eebb0d8c
 
   public $socket;
   public $id;
